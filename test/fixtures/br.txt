@@ -5,13 +5,13 @@ s <br> test
 .
 
 .
-a | b <Br> | in a table
+a | b <br> | in a table
 .
 <p>a | b <br> | in a table</p>
 .
 
 .
-bold with ** a line <BR> break in the middle ** of it
+bold with ** a line <br> break in the middle ** of it
 .
 <p>bold with ** a line <br> break in the middle ** of it</p>
 .
