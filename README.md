@@ -17,7 +17,6 @@ node.js, browser:
 
 ```bash
 npm install @iktakahiro/markdown-it-br --save
-bower install @iktakahiro/markdown-it-br --save
 ```
 
 ## Use
