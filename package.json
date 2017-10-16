@@ -17,13 +17,13 @@
         "coverage": "rm -rf coverage && istanbul cover node_modules/.bin/_mocha",
         "test-ci": "npm run lint && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage"
     },
-    "homepage": "https://github.com/jay-hodgson/markdown-it-br",
+    "homepage": "https://github.com/iktakahiro/markdown-it-br",
     "repository": {
         "type": "git",
-        "url": "git://github.com/jay-hodgson/markdown-it-br.git"
+        "url": "git://github.com/iktakahiro/markdown-it-br.git"
     },
     "bugs": {
-        "url": "https://github.com/jay-hodgson/markdown-it-br/issues"
+        "url": "https://github.com/iktakahiro/markdown-it-br/issues"
     },
     "author": "Takahiro Ikeuchi",
     "license": "MIT",
