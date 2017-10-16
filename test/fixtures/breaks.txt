@@ -1,0 +1,24 @@
+.
+s <br> test
+.
+<p>s <br> test</p>
+.
+
+.
+s <br>
+test
+.
+<p>s <br>
+test</p>
+.
+
+.
+<br>
+<br>
+.
+<p><br>
+<br></p>
+.
+
+clean up init (constructor)
+remove icon

@@ -17,6 +17,26 @@ s <br /> test
 .
 
 .
+s <br>
+.
+<p>s <br></p>
+.
+
+.
+s <br>
+.
+<p>s <br></p>
+.
+
+.
+<br>
+<br>
+.
+<p><br><br />
+<br></p>
+.
+
+.
 a | b <br> | in a table
 .
 <p>a | b <br> | in a table</p>

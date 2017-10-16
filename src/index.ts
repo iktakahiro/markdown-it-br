@@ -14,38 +14,40 @@ function matchBR(state: any, start: number): string | null {
     return null
 }
 
-export function br_plugin(md: MarkdownIt) {
+export function br_plugin(md): void {
 
-    function tokenize(state: any): void {
+    function tokenize(state: any, silent): boolean {
 
         let token
         const max = state.posMax
         const start = state.pos
-        if (start + 6 > max) {
-            return
+
+        // don't run any pairs in validation mode
+        if (silent) {
+            return false
         }
 
         const br = matchBR(state, start)
-        if (br) {
-            state.scanDelims(state.pos, true)
-            token = state.push("text", "", 0)
-            token.content = "<br>"
-            state.delimiters.push({
-                marker: token.content,
-                jump: 0,
-                token: state.tokens.length - 1,
-                level: state.level,
-                end: -1,
-                open: true,
-                close: true,
-            })
-        } else {
-            // neither
-            return
+        if (br === null || start + br.length > max) {
+            return false
         }
+        state.scanDelims(state.pos, true)
+        token = state.push("text", "", 0)
+        token.content = "<br>"
+        state.delimiters.push({
+            marker: token.content,
+            jump: 0,
+            token: state.tokens.length - 1,
+            level: state.level,
+            end: -1,
+            open: true,
+            close: true,
+        })
 
         // length is: <br> -> 4, <br/> -> 5, <br /> -> 6
         state.pos += br.length
+
+        return true
     }
 
     // Walk through delimiter list and replace text tokens with tags
