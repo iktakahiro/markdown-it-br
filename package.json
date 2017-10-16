@@ -2,7 +2,8 @@
     "name": "@iktakahiro/markdown-it-br",
     "version": "0.9.2",
     "description": "tag for markdown-it markdown parser.",
-    "main": "index.js",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
     "keywords": [
         "markdown-it-plugin",
         "markdown-it",
