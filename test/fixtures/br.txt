@@ -5,6 +5,18 @@ s <br> test
 .
 
 .
+s <br/> test
+.
+<p>s <br> test</p>
+.
+
+.
+s <br /> test
+.
+<p>s <br> test</p>
+.
+
+.
 a | b <br> | in a table
 .
 <p>a | b <br> | in a table</p>
@@ -21,6 +33,12 @@ coverage
 *~f
 .
 <p>*~f</p>
+.
+
+.
+s <BR> test
+.
+<p>s &lt;BR&gt; test</p>
 .
 
 clean up init (constructor)

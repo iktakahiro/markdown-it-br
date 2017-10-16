@@ -1,6 +1,6 @@
 {
-    "name": "markdown-it-br",
-    "version": "1.0.0",
+    "name": "@iktakahiro/markdown-it-br",
+    "version": "0.9.0",
     "description": "tag for markdown-it markdown parser.",
     "main": "index.js",
     "keywords": [
@@ -25,14 +25,13 @@
     "bugs": {
         "url": "https://github.com/jay-hodgson/markdown-it-br/issues"
     },
+    "author": "Takahiro Ikeuchi",
     "license": "MIT",
     "devDependencies": {
         "@types/markdown-it": "0.0.4",
         "@types/mocha": "^2.2.43",
         "@types/node": "^8.0.34",
         "coveralls": "^2.11.2",
-        "istanbul": "*",
-        "lodash": "*",
         "markdown-it": "^8.4.0",
         "markdown-it-testgen": "~0.1.0",
         "mocha": "*",
@@ -42,6 +41,5 @@
     "dependencies": {},
     "directories": {
         "test": "test"
-    },
-    "author": "Takahiro Ikeuchi"
+    }
 }

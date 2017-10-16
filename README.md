@@ -1,23 +1,23 @@
 # markdown-it-br
 
-[![Build Status](https://img.shields.io/travis/jay-hodgson/markdown-it-br/master.svg?style=flat)](https://travis-ci.org/jay-hodgson/markdown-it-br)
-[![NPM version](https://img.shields.io/npm/v/markdown-it-br.svg?style=flat)](https://www.npmjs.org/package/markdown-it-br)
-[![Coverage Status](https://img.shields.io/coveralls/jay-hodgson/markdown-it-br/master.svg?style=flat)](https://coveralls.io/r/jay-hodgson/markdown-it-br?branch=master)
+[![Build Status](https://img.shields.io/travis/iktakahiro/markdown-it-br/master.svg?style=flat)](https://travis-ci.org/jay-hodgson/markdown-it-br)
+[![NPM version](https://img.shields.io/npm/v/@iktakahiro/markdown-it-br.svg?style=flat)](https://www.npmjs.org/package/markdown-it-br)
 
 > BR plugin for [markdown-it](https://github.com/markdown-it/markdown-it) markdown parser.
 
-__v1.+ requires `markdown-it` v4.+, see changelog.__
-
 `protect <br> <script>` => `protect <br>`
 
+Support: `<br>` or `<br/>` or `<br />`
+
+UnSupport: `<BR>`
 
 ## Install
 
 node.js, browser:
 
 ```bash
-npm install markdown-it-br --save
-bower install markdown-it-br --save
+npm install @iktakahiro/markdown-it-br --save
+bower install @iktakahiro/markdown-it-br --save
 ```
 
 ## Use
@@ -35,6 +35,7 @@ The widgetparams can be used to determine what kind of html widget should be ren
 _Differences in browser._ If you load script directly into the page, without
 package system, module will add itself globally as `window.markdownitBr`.
 
-
 ## License
-[MIT](https://github.com/jay-hodgson/markdown-it-br/blob/master/LICENSE)
+[MIT](https://github.com/iktakahiro/markdown-it-br/blob/master/LICENSE)
+
+forked from: https://github.com/jay-hodgson/markdown-it-br/

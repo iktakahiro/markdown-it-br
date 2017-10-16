@@ -1,27 +1,32 @@
 import { MarkdownIt } from "markdown-it"
 
-// This interface is not used yet.
-export interface BrPluginOptions {
-    smallCapitalOnly?: boolean
-    addClassName?: string // need to sanitize
+/**
+ * Return case-sensitive matched br tag
+ * @param {any} state MarkdownIt state
+ * @param {number} start start position at br tag
+ * @returns {string | null} br tag (<br> or <br/> or <br />)
+ */
+function matchBR(state: any, start: number): string | null {
+    const match = state.src.slice(start, start + 6).match(/^<br\s?\/?>/)
+    if (match) {
+        return match[0]
+    }
+    return null
 }
 
-export function br_plugin(md: MarkdownIt, options: BrPluginOptions = {}) {
+export function br_plugin(md: MarkdownIt) {
 
-    function tokenize(state): void {
+    function tokenize(state: any): void {
+
         let token
         const max = state.posMax
         const start = state.pos
-        const marker = state.src.charCodeAt(start)
-        if (start + 4 > max) {
+        if (start + 6 > max) {
             return
         }
 
-        if (marker === 60 /* < */ &&
-            (state.src.charCodeAt(start + 1) === 98) /*  b */ &&
-            (state.src.charCodeAt(start + 2) === 114) /* r */ &&
-            state.src.charCodeAt(start + 3) === 62 /* > */
-        ) {
+        const br = matchBR(state, start)
+        if (br) {
             state.scanDelims(state.pos, true)
             token = state.push("text", "", 0)
             token.content = "<br>"
@@ -39,11 +44,11 @@ export function br_plugin(md: MarkdownIt, options: BrPluginOptions = {}) {
             return
         }
 
-        state.pos += 4
+        // length is: <br> -> 4, <br/> -> 5, <br /> -> 6
+        state.pos += br.length
     }
 
     // Walk through delimiter list and replace text tokens with tags
-    //
     function postProcess(state) {
         let i
         let delim
@@ -59,7 +64,7 @@ export function br_plugin(md: MarkdownIt, options: BrPluginOptions = {}) {
                 token.type = "br_openclose"
                 token.tag = "br"
                 token.nesting = 1
-                token.markup = "<br />"
+                token.markup = "<br>"
                 token.content = ""
             }
         }
