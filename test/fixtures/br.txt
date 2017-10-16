@@ -5,13 +5,25 @@ s <br> test
 .
 
 .
-a | b <Br> | in a table
+s <br/> test
+.
+<p>s <br> test</p>
+.
+
+.
+s <br /> test
+.
+<p>s <br> test</p>
+.
+
+.
+a | b <br> | in a table
 .
 <p>a | b <br> | in a table</p>
 .
 
 .
-bold with ** a line <BR> break in the middle ** of it
+bold with ** a line <br> break in the middle ** of it
 .
 <p>bold with ** a line <br> break in the middle ** of it</p>
 .
@@ -21,6 +33,12 @@ coverage
 *~f
 .
 <p>*~f</p>
+.
+
+.
+s <BR> test
+.
+<p>s &lt;BR&gt; test</p>
 .
 
 clean up init (constructor)
