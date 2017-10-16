@@ -1,6 +1,6 @@
 {
     "name": "@iktakahiro/markdown-it-br",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "description": "tag for markdown-it markdown parser.",
     "main": "index.js",
     "keywords": [
