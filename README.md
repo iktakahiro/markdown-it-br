@@ -13,8 +13,6 @@ UnSupport: `<BR>`
 
 ## Install
 
-node.js, browser:
-
 ```bash
 npm install @iktakahiro/markdown-it-br --save
 ```
