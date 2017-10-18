@@ -1,1 +1,1 @@
-export declare function br_plugin(md: any): void;
+export default function markdownItBr(md: any): void;

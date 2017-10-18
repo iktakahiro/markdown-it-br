@@ -14,7 +14,7 @@ function matchBR(state: any, start: number): string | null {
     return null
 }
 
-export function br_plugin(md): void {
+export default function markdownItBr(md): void {
 
     function tokenize(state: any, silent): boolean {
 
