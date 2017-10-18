@@ -1,6 +1,8 @@
-coverage/
-support/
+src/
 test/
-Makefile
+coverage/
 .*
 *.log
+tsconfig.json
+tsling.json
+.travis.yml
