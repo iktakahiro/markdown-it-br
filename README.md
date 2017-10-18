@@ -21,18 +21,14 @@ npm install @iktakahiro/markdown-it-br --save
 
 ## Use
 
-```js
-var md = require('markdown-it')()
-            .use(require('markdown-it-br'));
+```typescript
+import MarkdownIt = require("markdown-it")
+import markdownItBr from "@iktakahiro/markdown-it-br"
 
-md.render('protect <br>') // => 'protect <br>'
-
+const md = MarkdownIt()
+md.render('protect <br>')
+// => 'protect <br>'
 ```
-
-The widgetparams can be used to determine what kind of html widget should be rendered in the output container.
-
-_Differences in browser._ If you load script directly into the page, without
-package system, module will add itself globally as `window.markdownitBr`.
 
 ## License
 [MIT](https://github.com/iktakahiro/markdown-it-br/blob/master/LICENSE)
