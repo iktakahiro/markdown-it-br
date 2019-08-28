@@ -37,7 +37,7 @@
         "@types/markdown-it": "0.0.4",
         "@types/mocha": "^2.2.43",
         "@types/node": "^8.0.34",
-        "coveralls": "^2.11.2",
+        "coveralls": "^3.0.6",
         "markdown-it": "^8.4.0",
         "markdown-it-testgen": "~0.1.0",
         "mocha": "*",
